@@ -21,9 +21,9 @@ app.get('/', function (req, res) {
     sqlUtils.connect(req, res, sqlUtils.makeSqlRequest);
 });
 
-
+const cors = require('cors');
  
- 
+ app.use(new cors());
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');
